@@ -371,7 +371,6 @@ pub struct DestinationConfig {
 pub type DestinationId = u16;
 
 /// The uri to provide export services to.
-#[allow(dead_code)]
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct Destination {
     /// The host name of the target destination (IP or hostname).

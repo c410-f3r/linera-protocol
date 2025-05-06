@@ -331,6 +331,7 @@ impl EvmKeyPair {
     }
 
     /// Generates a new key pair from the given RNG. Use with care.
+    #[allow(dead_code)]
     #[cfg(with_getrandom)]
     pub fn generate_from<R: crate::crypto::CryptoRng>(rng: &mut R) -> Self {
         let secret_key = EvmSecretKey(SigningKey::random(rng));

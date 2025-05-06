@@ -244,3 +244,10 @@ impl CrowdFundingContract {
             .expect("Application is not running on the host chain or was not instantiated yet")
     }
 }
+
+impl Status {
+    /// Returns `true` if the campaign status is [`Status::Complete`].
+    pub fn is_complete(&self) -> bool {
+        matches!(self, Status::Complete)
+    }
+}

@@ -34,11 +34,3 @@ pub struct CrowdFundingState {
     /// The instantiation data that determines the details of the campaign.
     pub instantiation_argument: RegisterView<Option<InstantiationArgument>>,
 }
-
-#[allow(dead_code)]
-impl Status {
-    /// Returns `true` if the campaign status is [`Status::Complete`].
-    pub fn is_complete(&self) -> bool {
-        matches!(self, Status::Complete)
-    }
-}
